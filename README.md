@@ -6,7 +6,7 @@
 | ------------ | ----------------------------------------------------------------------- |
 | **Bavly**    | Final review, integration, testing lead, bug tracking, progress reports |
 | **Member A** | Game logic, movement, rules, target interaction                         |
-| **Member B** | GUI, Qt interface, buttons, screens, score display                      |
+| **Youssef** | GUI, Qt interface, buttons, screens, score display                      |
 | **Member C** | OOP structure, classes, inheritance, architecture, module integration   |
 | **Member D** | Scoring system, game state, win/lose logic, optional feature            |
 
@@ -33,7 +33,7 @@
 
 * All: Finalize game idea and rules
 * Member C: Draft class list (e.g., `Player`, `Target`, `GameManager`)
-* Member B: Sketch UI layout (menus, game screen)
+* Youssef: Sketch UI layout (menus, game screen)
 * Review Support: ❌ Not needed
 * Bavly: Review plan and identify conflicts early
 
@@ -70,7 +70,7 @@ checkWinCondition()
 
 ### 📆 April 7
 
-* Member B: UI flow (start → gameplay → game over)
+* Youssef: UI flow (start → gameplay → game over)
 * Member C: Final UML update
 * All: Agree on final structure
 * Review Support: ❌ Not needed
@@ -83,7 +83,7 @@ checkWinCondition()
 ### 📆 April 8
 
 * Member C: Base classes (`GameObject`, `Player`, `GameManager`)
-* Member B: Main window + Qt setup
+* Youssef: Main window + Qt setup
 * Member A: Basic movement structure
 * Member D: Score + game state variables
 * Review Support: Member D
@@ -94,7 +94,7 @@ checkWinCondition()
 ### 📆 April 9–10
 
 * Member A: Basic player movement
-* Member B: Start/Exit buttons
+* Youssef: Start/Exit buttons
 * Member C: Connect classes
 * Member D: Basic scoring logic
 * Review Support: Member D
@@ -158,7 +158,7 @@ Every feature must be **implemented AND integrated on the same day**.
 
 * Member A: Target interaction
 * Member D: Win/lose conditions
-* Member B: Score display
+* Youssef: Score display
 * Member C: Class cleanup
 * Review Support: Member A
 * Bavly: Enforce consistency
@@ -169,7 +169,7 @@ Every feature must be **implemented AND integrated on the same day**.
 
 * Member A: Movement improvements (boundaries, restrictions)
 * Member D: Game over logic
-* Member B: Game over screen
+* Youssef: Game over screen
 * Member C: Code cleanup
 * Review Support: Member B
 * Bavly: Integration + bug tracking
@@ -223,7 +223,7 @@ Every feature must be **implemented AND integrated on the same day**.
 ### 📆 May 1–4
 
 * Member D: Optional feature (difficulty or timer)
-* Member B: UI polish
+* Youssef: UI polish
 * Member A: Movement smoothness
 * Member C: Final OOP improvements
 * Bavly: Remove unstable features
@@ -252,7 +252,7 @@ Every feature must be **implemented AND integrated on the same day**.
 ### 📆 May 8–9
 
 * All: Fix remaining bugs
-* Member B: Screenshots
+* Youssef: Screenshots
 * Member C: Final UML
 * Bavly: Write report
 * Review Support: Member D
@@ -262,7 +262,7 @@ Every feature must be **implemented AND integrated on the same day**.
 ### 📆 May 10–11
 
 * All: Prepare demo
-* Review Support: Member B
+* Review Support: Youssef
 
 ---
 
