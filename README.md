@@ -7,7 +7,7 @@
 | **Bavly**    | Final review, integration, testing lead, bug tracking, progress reports |
 | **Member A** | Game logic, movement, rules, target interaction                         |
 | **Youssef** | GUI, Qt interface, buttons, screens, score display                      |
-| **Member C** | OOP structure, classes, inheritance, architecture, module integration   |
+| **Abdallah** | OOP structure, classes, inheritance, architecture, module integration   |
 | **Member D** | Scoring system, game state, win/lose logic, optional feature            |
 
 ---
@@ -32,7 +32,7 @@
 ### 📆 April 5
 
 * All: Finalize game idea and rules
-* Member C: Draft class list (e.g., `Player`, `Target`, `GameManager`)
+* Abdallah: Draft class list (e.g., `Player`, `Target`, `GameManager`)
 * Youssef: Sketch UI layout (menus, game screen)
 * Review Support: ❌ Not needed
 * Bavly: Review plan and identify conflicts early
@@ -41,7 +41,7 @@
 
 ### 📆 April 6
 
-* Member C: First UML class diagram
+* Abdallah: First UML class diagram
 * Member A: Movement logic pseudocode
 * Member D: Scoring + win conditions
 * Review Support: ❌ Not needed
@@ -71,7 +71,7 @@ checkWinCondition()
 ### 📆 April 7
 
 * Youssef: UI flow (start → gameplay → game over)
-* Member C: Final UML update
+* Abdallah: Final UML update
 * All: Agree on final structure
 * Review Support: ❌ Not needed
 * Bavly: Final approval before implementation
@@ -82,7 +82,7 @@ checkWinCondition()
 
 ### 📆 April 8
 
-* Member C: Base classes (`GameObject`, `Player`, `GameManager`)
+* Abdallah: Base classes (`GameObject`, `Player`, `GameManager`)
 * Youssef: Main window + Qt setup
 * Member A: Basic movement structure
 * Member D: Score + game state variables
@@ -95,7 +95,7 @@ checkWinCondition()
 
 * Member A: Basic player movement
 * Youssef: Start/Exit buttons
-* Member C: Connect classes
+* Abdallah: Connect classes
 * Member D: Basic scoring logic
 * Review Support: Member D
 * Bavly: Daily reviews
@@ -121,7 +121,7 @@ checkWinCondition()
   * Player movement works
   * UI responds
   * Game state transitions cleanly
-* Review Support: Member C
+* Review Support: Abdallah
 * Bavly: Integration review + bug tracking
 
 ---
@@ -159,7 +159,7 @@ Every feature must be **implemented AND integrated on the same day**.
 * Member A: Target interaction
 * Member D: Win/lose conditions
 * Youssef: Score display
-* Member C: Class cleanup
+* Abdallah: Class cleanup
 * Review Support: Member A
 * Bavly: Enforce consistency
 
@@ -170,7 +170,7 @@ Every feature must be **implemented AND integrated on the same day**.
 * Member A: Movement improvements (boundaries, restrictions)
 * Member D: Game over logic
 * Youssef: Game over screen
-* Member C: Code cleanup
+* Abdallah: Code cleanup
 * Review Support: Member B
 * Bavly: Integration + bug tracking
 
@@ -190,7 +190,7 @@ Every feature must be **implemented AND integrated on the same day**.
 
 * Clean transitions
 
-* Review Support: Member C
+* Review Support: Abdallah
 
 * Bavly:
 
@@ -225,7 +225,7 @@ Every feature must be **implemented AND integrated on the same day**.
 * Member D: Optional feature (difficulty or timer)
 * Youssef: UI polish
 * Member A: Movement smoothness
-* Member C: Final OOP improvements
+* Abdallah: Final OOP improvements
 * Bavly: Remove unstable features
 * Review Support: Member B
 
@@ -253,7 +253,7 @@ Every feature must be **implemented AND integrated on the same day**.
 
 * All: Fix remaining bugs
 * Youssef: Screenshots
-* Member C: Final UML
+* Abdallah: Final UML
 * Bavly: Write report
 * Review Support: Member D
 
@@ -275,7 +275,7 @@ Every feature must be **implemented AND integrated on the same day**.
   * Rapid inputs
   * Edge cases
 * Team: Final bug fixes only
-* Review Support: Member C
+* Review Support: Abdallah
 
 ---
 
