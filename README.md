@@ -8,7 +8,7 @@
 | **Member A** | Game logic, movement, rules, target interaction                         |
 | **Youssef** | GUI, Qt interface, buttons, screens, score display                      |
 | **Abdallah** | OOP structure, classes, inheritance, architecture, module integration   |
-| **Member D** | Scoring system, game state, win/lose logic, optional feature            |
+| **Ahmed** | Scoring system, game state, win/lose logic, optional feature            |
 
 ---
 
@@ -43,7 +43,7 @@
 
 * Abdallah: First UML class diagram
 * Member A: Movement logic pseudocode
-* Member D: Scoring + win conditions
+* Ahmed: Scoring + win conditions
 * Review Support: ❌ Not needed
 * Bavly: Ensure rules, classes, and flow are consistent
 
@@ -85,8 +85,8 @@ checkWinCondition()
 * Abdallah: Base classes (`GameObject`, `Player`, `GameManager`)
 * Youssef: Main window + Qt setup
 * Member A: Basic movement structure
-* Member D: Score + game state variables
-* Review Support: Member D
+* Ahmed: Score + game state variables
+* Review Support: Ahmed
 * Bavly: Ensure clean architecture
 
 ---
@@ -96,8 +96,8 @@ checkWinCondition()
 * Member A: Basic player movement
 * Youssef: Start/Exit buttons
 * Abdallah: Connect classes
-* Member D: Basic scoring logic
-* Review Support: Member D
+* Ahmed: Basic scoring logic
+* Review Support: Ahmed
 * Bavly: Daily reviews
 
 **✅ Main Checks:**
@@ -138,7 +138,7 @@ checkWinCondition()
   * Game-state switching
   * Broken transitions
 * Team: Fix assigned bugs only
-* Review Support: Member D
+* Review Support: Ahmed
 
 ---
 
@@ -157,7 +157,7 @@ Every feature must be **implemented AND integrated on the same day**.
 ### 📆 April 17–19
 
 * Member A: Target interaction
-* Member D: Win/lose conditions
+* Ahmed: Win/lose conditions
 * Youssef: Score display
 * Abdallah: Class cleanup
 * Review Support: Member A
@@ -168,7 +168,7 @@ Every feature must be **implemented AND integrated on the same day**.
 ### 📆 April 20–22
 
 * Member A: Movement improvements (boundaries, restrictions)
-* Member D: Game over logic
+* Ahmed: Game over logic
 * Youssef: Game over screen
 * Abdallah: Code cleanup
 * Review Support: Member B
@@ -210,7 +210,7 @@ Every feature must be **implemented AND integrated on the same day**.
   * UI breaks
   * Edge transitions
 * Team: Fix bugs only
-* Review Support: Member D
+* Review Support: Ahmed
 
 ---
 
@@ -222,7 +222,7 @@ Every feature must be **implemented AND integrated on the same day**.
 
 ### 📆 May 1–4
 
-* Member D: Optional feature (difficulty or timer)
+* Ahmed: Optional feature (difficulty or timer)
 * Youssef: UI polish
 * Member A: Movement smoothness
 * Abdallah: Final OOP improvements
@@ -255,7 +255,7 @@ Every feature must be **implemented AND integrated on the same day**.
 * Youssef: Screenshots
 * Abdallah: Final UML
 * Bavly: Write report
-* Review Support: Member D
+* Review Support: Ahmed
 
 ---
 
