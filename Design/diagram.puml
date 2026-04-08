@@ -1,0 +1,204 @@
+@startuml
+skinparam Style strictuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype ortho
+skinparam roundcorner 15
+skinparam nodesep 50
+skinparam ranksep 60
+skinparam packageStyle rectangle
+hide empty members
+
+' ─── Colors ──────────────────────────────────────────────
+!define CORE_COLOR #E3F2FD
+!define MAP_COLOR #E8F5E9
+!define OBJECT_COLOR #FFF3E0
+!define SYSTEM_COLOR #F3E5F5
+!define ENUM_COLOR #ECEFF1
+
+' ─── Enums ───────────────────────────────────────────────
+package "Enums" <<Rectangle>> {
+    enum GameState #ENUM_COLOR {
+        START
+        PLAYING
+        PAUSED
+        GAME_OVER
+    }
+
+    enum Difficulty #ENUM_COLOR {
+        EASY
+        NORMAL
+        HARD
+    }
+
+    enum Theme #ENUM_COLOR {
+        FOREST
+        DUNGEON
+        SPACE
+    }
+}
+
+' ─── Core ────────────────────────────────────────────────
+package "Core" {
+    class GameWindow #CORE_COLOR {
+        - game: Game
+        + startGame()
+        + updateDisplay()
+        + showGameOver()
+    }
+
+    class Game #CORE_COLOR {
+        - state: GameState
+        - difficulty: Difficulty
+        - score: int
+        - timer: int
+        - currentLevel: int
+        + start()
+        + update()
+        + pause()
+        + endGame()
+        + reset()
+    }
+}
+
+' ─── Map System ──────────────────────────────────────────
+package "Map System" {
+    class Map #MAP_COLOR {
+        - theme: Theme
+        + loadMap()
+        + render()
+    }
+
+    class Checkpoint #MAP_COLOR {
+        - reached: bool
+        + trigger()
+    }
+}
+
+' ─── Game Objects ────────────────────────────────────────
+package "Game Objects" {
+
+    abstract class GameObject #OBJECT_COLOR {
+        # x: int
+        # y: int
+        {abstract} # update()
+        {abstract} # render()
+    }
+
+    abstract class Entity #OBJECT_COLOR {
+        # speed: float
+        {abstract} # move()
+    }
+
+    class Player #OBJECT_COLOR {
+        + move()
+        + collect(t: Target)
+        + useItem(p: PowerUp)
+    }
+
+    class Enemy #OBJECT_COLOR {
+        - patrolPath: List<Point>
+        + move()
+        + attack(p: Player)
+    }
+
+    class Target #OBJECT_COLOR {
+        - value: int
+        - isCollected: bool
+        + collect()
+    }
+
+    class Obstacle #OBJECT_COLOR {
+        - type: string
+        + blockMovement()
+    }
+
+    class PowerUp #OBJECT_COLOR {
+        - effect: string
+        + applyEffect(p: Player)
+    }
+
+    class SpeedBoost #OBJECT_COLOR {
+        + applyEffect(p: Player)
+    }
+
+    class RevealMap #OBJECT_COLOR {
+        + applyEffect(p: Player)
+    }
+
+    class TimedObstacle #OBJECT_COLOR {
+        - duration: float
+        + blockMovement()
+    }
+}
+
+' ─── Systems ─────────────────────────────────────────────
+package "Systems" {
+    class InputHandler #SYSTEM_COLOR {
+        + isKeyPressed(key: string): bool
+        + isMouseClicked(): bool
+    }
+
+    class SaveManager #SYSTEM_COLOR {
+        + saveGame(g: Game)
+        + loadGame(): Game
+    }
+
+    class CurrencyManager #SYSTEM_COLOR {
+        - coins: int
+        + addCoins(amount: int)
+        + spendCoins(amount: int): bool
+    }
+
+    class DifficultyManager #SYSTEM_COLOR {
+        + applyRules(g: Game)
+        + getCheckpointPolicy(): int
+        + getTimeLimit(): int
+    }
+}
+
+' ─── Inheritance ─────────────────────────────────────────
+GameObject <|-- Entity
+GameObject <|-- Target
+GameObject <|-- Obstacle
+GameObject <|-- PowerUp
+GameObject <|-- Checkpoint
+
+Entity <|-- Player
+Entity <|-- Enemy
+
+PowerUp <|-- SpeedBoost
+PowerUp <|-- RevealMap
+
+Obstacle <|-- TimedObstacle
+
+' ─── Composition ─────────────────────────────────────────
+GameWindow "1" *-- "1" Game
+Game "1" *-- "1" Map
+Game "1" *-- "1" Player
+
+Map "1" *-- "*" Target
+Map "1" *-- "*" Obstacle
+Map "1" *-- "*" PowerUp
+Map "1" *-- "*" Checkpoint
+Map "1" *-- "*" Enemy
+
+' ─── Aggregation ─────────────────────────────────────────
+Player "1" o-- "*" PowerUp : inventory
+
+' ─── Dependencies ────────────────────────────────────────
+Game --> DifficultyManager
+Game --> SaveManager
+Game --> CurrencyManager
+Game --> InputHandler
+
+Game ..> GameState
+Game ..> Difficulty
+Map ..> Theme
+
+Player ..> InputHandler
+Player ..> Target
+Player ..> PowerUp
+Enemy ..> Player
+
+@enduml
