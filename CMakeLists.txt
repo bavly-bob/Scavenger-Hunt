@@ -14,9 +14,25 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        ui/GameWindow.cpp
+        ui/GameWindow.h
+        ui/GameWindow.ui
+        ui/MainMenu.ui
+        ui/GameScreen.ui
+        ui/GameOver.ui
+        core/include/Game.h core/src/Game.cpp
+        core/include/GameObject.h core/src/GameObject.cpp
+        core/include/Entity.h core/src/Entity.cpp
+        core/include/Map.h core/src/Map.cpp
+        gameplay/include/Player.h gameplay/src/Player.cpp
+        gameplay/include/Enemy.h gameplay/src/Enemy.cpp
+        gameplay/include/Target.h gameplay/src/Target.cpp
+        gameplay/include/Obstacle.h gameplay/src/Obstacle.cpp
+        gameplay/include/PowerUp.h gameplay/src/PowerUp.cpp
+        systems/include/ScoreManager.h systems/src/ScoreManager.cpp
+        systems/include/GameStateManager.h systems/src/GameStateManager.cpp
+        systems/include/DifficultyManager.h systems/src/DifficultyManager.cpp
+        utils/Enums.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -43,6 +59,7 @@ else()
 endif()
 
 target_link_libraries(ScavengerHunt PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_include_directories(ScavengerHunt PRIVATE . core/include gameplay/include systems/include utils ui)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -68,3 +85,14 @@ install(TARGETS ScavengerHunt
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(ScavengerHunt)
 endif()
+
+enable_testing()
+
+add_executable(test_game tests/test_game.cpp)
+target_include_directories(test_game PRIVATE . core/include gameplay/include systems/include utils ui)
+
+add_executable(test_player tests/test_player.cpp)
+target_include_directories(test_player PRIVATE . core/include gameplay/include systems/include utils ui)
+
+add_executable(test_score tests/test_score.cpp)
+target_include_directories(test_score PRIVATE . core/include gameplay/include systems/include utils ui)
