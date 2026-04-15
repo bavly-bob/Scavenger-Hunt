@@ -17,7 +17,8 @@ set(PROJECT_SOURCES
         ui/GameWindow.cpp
         ui/GameWindow.h
         ui/GameWindow.ui
-        ui/MainMenu.ui
+        ui/MainMenu.cpp
+        ui/MainMenu.h
         ui/GameScreen.ui
         ui/GameOver.ui
         core/include/Game.h core/src/Game.cpp
