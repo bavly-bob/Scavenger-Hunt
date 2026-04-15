@@ -9,6 +9,10 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+if(MSVC)
+    add_compile_options(/Zc:__cplusplus /permissive-)
+endif()
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -16,11 +20,8 @@ set(PROJECT_SOURCES
         main.cpp
         ui/GameWindow.cpp
         ui/GameWindow.h
-        ui/GameWindow.ui
         ui/MainMenu.cpp
         ui/MainMenu.h
-        ui/GameScreen.ui
-        ui/GameOver.ui
         core/include/Game.h core/src/Game.cpp
         core/include/GameObject.h core/src/GameObject.cpp
         core/include/Entity.h core/src/Entity.cpp

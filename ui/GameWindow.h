@@ -1,23 +1,24 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 
-#include <QMainWindow>
+#include <QWidget>
+#include "Player.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class GameWindow;
-}
-QT_END_NAMESPACE
-
-class GameWindow : public QMainWindow
+class GameWindow : public QWidget
 {
     Q_OBJECT
 
 public:
-    GameWindow(QWidget *parent = nullptr);
-    ~GameWindow();
+    explicit GameWindow(QWidget *parent = nullptr);
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
-    Ui::GameWindow *ui;
+    Player m_player;
+    static constexpr int GRID_SIZE = 10;
+    static constexpr int CELL_SIZE = 40;
 };
+
 #endif // GAMEWINDOW_H
