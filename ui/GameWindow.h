@@ -17,6 +17,11 @@ public:
     GameWindow(QWidget *parent = nullptr);
     ~GameWindow();
 
+    // Preliminary functions
+    void showMainMenu();
+    void showGameScreen();
+    void showGameOverScreen(bool won, int score);
+
 private:
     Ui::GameWindow *ui;
 };
