@@ -15,6 +15,11 @@ protected:
     void paintEvent(QPaintEvent *event) override;
     void keyPressEvent(QKeyEvent *event) override;
 
+    // Preliminary functions
+    void showMainMenu();
+    void showGameScreen();
+    void showGameOverScreen(bool won, int score);
+
 private:
     Player m_player;
     static constexpr int GRID_SIZE = 10;
