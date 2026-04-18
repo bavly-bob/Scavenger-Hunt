@@ -5,7 +5,7 @@
 | Member       | Responsibilities                                                        |
 | ------------ | ----------------------------------------------------------------------- |
 | **Bavly**    | Final review, integration, testing lead, bug tracking, progress reports |
-| **Member A** | Game logic, movement, rules, target interaction                         |
+| **Ali** | Game logic, movement, rules, target interaction                         |
 | **Youssef** | GUI, Qt interface, buttons, screens, score display                      |
 | **Abdallah** | OOP structure, classes, inheritance, architecture, module integration   |
 | **Ahmed** | Scoring system, game state, win/lose logic, optional feature            |
